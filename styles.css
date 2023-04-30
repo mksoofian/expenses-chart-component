@@ -1,0 +1,214 @@
+:root {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  --softRed: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+  --darkBrown: hsl(25, 47%, 15%);
+  --mediumBrown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --veryPaleOrange: hsl(33, 100%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --smallFont: 1.8rem;
+  --mediumFont: 3rem;
+  --largeFont: 4rem;
+}
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: var(--mediumFont);
+  font-family: "DM Sans", sans-serif;
+  background: var(--cream);
+  width: 100%;
+  height: 100vh;
+  /* positioning */
+  display: flex;
+  justify-content: center;
+}
+
+.master_container {
+  width: 500px;
+  gap: 2rem;
+  margin: 2rem;
+  /* positioning */
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+/* Header Field */
+.header-card {
+  padding: 2rem 3rem;
+  background-color: var(--softRed);
+  color: var(--white);
+  width: 100%;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.balance_header {
+  font-size: var(--smallFont);
+  margin-bottom: 1rem;
+}
+.balanceAmount-wrapper {
+  font-size: var(--mediumFont);
+  font-weight: 700;
+}
+
+/* Details Field */
+.details-card {
+  padding: 2rem 3rem;
+  background-color: var(--veryPaleOrange);
+  color: var(--darkBrown);
+  width: 100%;
+  border-radius: 2rem;
+  font-size: var(--smallFont);
+}
+.this_month {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+h1 .spending_header {
+  font-size: var(--mediumFont);
+}
+
+.graphs {
+  border-bottom: 2px solid var(--cream);
+  width: 100%;
+  height: 300px;
+  padding-bottom: 2rem;
+}
+.bars_wrapper,
+.days_wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.bars_wrapper {
+  height: 90%;
+  align-items: flex-end;
+}
+
+.bar {
+  background-color: var(--softRed);
+  border-radius: 0.5rem;
+  width: 12%;
+}
+.bar:hover {
+  background-color: hsla(10, 79%, 65%, 0.5);
+}
+.bar:hover > .dayAmount {
+  background-color: var(--darkBrown);
+  color: var(--cream);
+}
+
+.days-wrapper {
+  height: 10%;
+}
+.day {
+  width: 12%;
+  text-align: center;
+  margin: 1rem 0;
+  font-size: var(--smallFont);
+}
+.dayAmount {
+  background-color: transparent;
+  color: transparent;
+  border-radius: 0.5rem;
+  width: 125%;
+  transform: translateY(-117.45%);
+  position: relative;
+  right: 13%;
+  font-size: var(--smallFont);
+  text-align: center;
+  padding: 0.5rem 0.25rem;
+}
+
+.day,
+.total_header,
+.change_header {
+  color: var(--mediumBrown);
+}
+.total_header {
+  font-weight: 400;
+  font-size: var(--smallFont);
+}
+.totalAmount-wrapper {
+  font-weight: 700;
+  font-size: var(--largeFont);
+}
+.change_perc {
+  font-weight: 700;
+}
+.change_fromLastMonth-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: right;
+  padding-bottom: 0.75rem;
+}
+
+@media (max-width: 1000px) {
+  :root {
+    --smallFont: 1rem;
+    --mediumFont: 1.8rem;
+    --largeFont: 2rem;
+  }
+
+  .master_container {
+    width: 100%;
+    max-width: 400px;
+    min-width: 280px;
+    gap: 1rem;
+    margin: 0.5rem;
+    padding: 2rem;
+  }
+  .header-card {
+    padding: 0.75rem 1.5rem;
+  }
+  .balance_header {
+    margin-bottom: initial;
+  }
+  .logo-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .logo-wrapper > img {
+    width: 5rem;
+  }
+  .details-card {
+    padding: 2rem 2rem;
+    border-radius: 1rem;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+  .spending_header {
+    height: 10%;
+  }
+  .graphs {
+    width: 100%;
+    height: 200px;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    margin-top: auto;
+  }
+
+  .bar,
+  .day {
+    width: 10%;
+  }
+  .this_month {
+    height: 5%;
+    margin: 0;
+  }
+  .change_fromLastMonth-wrapper {
+    padding-bottom: 0.5rem;
+  }
+}

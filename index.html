@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Expenses chart component</title>
+  </head>
+  <body>
+    <main class="master_container">
+      <section class="header-card">
+        <div class="myBalance-wrapper">
+          <p class="balance_header">My balance</p>
+          <div class="balanceAmount-wrapper">
+            $ <span class="balanceAmount"></span>
+          </div>
+        </div>
+        <div class="logo-wrapper"><img src="./images/logo.svg" alt="logo" /></div>
+      </section>
+
+      <section class="details-card">
+        <h1 class="spending_header">
+          Spending - Last <span class="day_count"></span> days
+        </h1>
+        <div class="graphs">
+          <div class="bars_wrapper">
+            <!-- <div class="bar_container"> -->
+              <!-- <div class="dayAmount"></div>
+              <div class="bar"></div> -->
+            </div>
+			<div class="days_wrapper"></div>
+          </div>
+        </div>
+        <div class="this_month">
+          <div class="month_total">
+            <h3 class="total_header">Total this month</h3>
+            <div class="totalAmount-wrapper">
+              $<span class="totalAmount"></span>
+            </div>
+          </div>
+          <div class="change_fromLastMonth-wrapper">
+            <div class="change_perc">
+              <span class="percSymbol"></span
+              ><span class="changeAmount"></span>%
+            </div>
+            <div class="change_header">from last month</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="./app.js" defer></script>
+</html>
+
+<!--     My balance $921.48 Spending - Last 7 days mon tue wed thu fri sat sun Total
+    this month $478.33 +2.4% from last month -->
