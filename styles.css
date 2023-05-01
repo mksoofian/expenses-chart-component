@@ -42,7 +42,7 @@ body {
 
 /* Header Field */
 .header-card {
-  padding: 2rem 3rem;
+  padding: 2rem 2rem;
   background-color: var(--softRed);
   color: var(--white);
   width: 100%;
@@ -58,6 +58,10 @@ body {
 .balanceAmount-wrapper {
   font-size: var(--mediumFont);
   font-weight: 700;
+}
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 /* Details Field */
@@ -167,11 +171,9 @@ h1 .spending_header {
     min-width: 280px;
     gap: 1rem;
     margin: 0.5rem;
-    padding: 2rem;
+    padding: 3rem;
   }
-  .header-card {
-    padding: 0.75rem 1.5rem;
-  }
+
   .balance_header {
     margin-bottom: initial;
   }

@@ -84,22 +84,25 @@ fetch("data.json")
       newBubble.innerHTML = `$${data[barnum].amount}`;
       barSection.appendChild(newBar);
       document.querySelector(`.bar${barnum}`).appendChild(newBubble);
-
-      ////Change color of the current day of the week to blue
-      //Dynamically determine current say of the week.
-      let currentDate = new Date();
-      let currentDay = currentDate.getDay();
-      //Select Bar to Change color and Set bar to new color
-      let currentDayBar = document.querySelector(`#bar${currentDay}`);
-      currentDayBar.style.backgroundColor = `var(--cyan)`;
-      // change opacity upon hover
-      currentDayBar.addEventListener("mouseover", () => {
-        currentDayBar.style.backgroundColor = `hsl(186, 34%, 60%, 0.5)`;
-      });
-      currentDayBar.addEventListener("mouseout", () => {
-        currentDayBar.style.backgroundColor = `hsl(186, 34%, 60%)`;
-      });
     }
+    ////Change color of the current day of the week to blue
+    //Dynamically determine current say of the week.
+    let currentDate = new Date();
+    let currentDay = currentDate.getDay();
+    //   //Select Bar to Change color and Set bar to new color
+    let currentDayBar = document.querySelector(`#bar${currentDay}`);
+    console.log(currentDayBar);
+    document.querySelector(
+      `#bar${currentDay}`
+    ).style.backgroundColor = `var(--cyan)`;
+    // change opacity upon hover
+    currentDayBar.addEventListener("mouseover", () => {
+      currentDayBar.style.backgroundColor = `hsl(186, 34%, 60%, 0.5)`;
+    });
+    currentDayBar.addEventListener("mouseout", () => {
+      currentDayBar.style.backgroundColor = `hsl(186, 34%, 60%)`;
+    });
+
     //Create # of days == to number of days provided
     for (let daynum = 0; daynum < data.length; daynum++) {
       let days = data[daynum].day;
